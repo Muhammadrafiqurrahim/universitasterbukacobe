@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran</title>
+<link rel="stylesheet" href="daftar.css">
+
+
+
+</head>
+<body>
+
+<header class="header">
+    <div class="nav-container">
+
+        <!-- LOGO -->
+        <div class="logo-box">
+            <img src="logo.png" alt="Logo Kampus">
+            <span>Universitas Terbuka</span>
+        </div>
+
+        <!-- MENU -->
+        <nav class="navbar">
+            <a href="index.html">Beranda</a>
+            <a href="#" class="active">Pendaftaran</a>
+        </nav>
+
+
+    </div>
+</header>
+
+<section class="form-section">
+<div class="container">
+
+<h1 style="color: white;">Form Pendaftaran Mahasiswa</h1>
+
+<form id="formPendaftaran">
+
+<!-- DATA DIRI -->
+<div class="card">
+<h3>Data Diri</h3>
+
+<input type="text" name="nama" placeholder="Nama Lengkap">
+<input type="text" name="nik" placeholder="NIK">
+
+<div class="row">
+<input type="text" name="tempat" placeholder="Tempat Lahir">
+<input type="date" name="tanggal">
+</div>
+
+<select name="jk">
+<option>Jenis Kelamin</option>
+<option>Laki-laki</option>
+<option>Perempuan</option>
+</select>
+
+<input type="email" name="email" placeholder="Email">
+
+<select name="agama">
+<option>Agama</option>
+<option>Islam</option>
+<option>Kristen</option>
+<option>Hindu</option>
+<option>Buddha</option>
+</select>
+
+<input type="text" name="hp" placeholder="No HP">
+
+<select name="status">
+<option>Status</option>
+<option>Belum Menikah</option>
+<option>Menikah</option>
+</select>
+
+<input type="text" name="ibu" placeholder="Nama Ibu Kandung">
+</div>
+
+<!-- ALAMAT -->
+<div class="card">
+<h3>Data Alamat</h3>
+
+<textarea name="alamat" placeholder="Alamat Rumah"></textarea>
+<input type="text" name="kodepos" placeholder="Kode Pos">
+</div>
+
+<!-- JALUR -->
+<div class="card">
+<h3>Jalur Pendaftaran</h3>
+
+<div class="radio-box">
+
+<label class="radio-card">
+<input type="radio" name="jalur" value="RPL">
+<div>
+<h4>RPL</h4>
+<p>Pengakuan pengalaman kerja</p>
+</div>
+</label>
+
+<label class="radio-card">
+<input type="radio" name="jalur" value="RPL POLRI">
+<div>
+<h4>RPL POLRI</h4>
+<p>Khusus anggota POLRI</p>
+</div>
+</label>
+
+<label class="radio-card">
+<input type="radio" name="jalur" value="NON RPL">
+<div>
+<h4>NON RPL</h4>
+<p>Jalur reguler umum</p>
+</div>
+</label>
+
+</div>
+</div>
+
+<!-- JURUSAN -->
+<div class="card">
+<h3>Pilih Jurusan</h3>
+<select name="jurusan">
+<option>Pilih Jurusan</option>
+<option>Teknik Informatika</option>
+<option>Manajemen</option>
+<option>Ilmu Komunikasi</option>
+</select>
+</div>
+
+<!-- 🔥 UPLOAD BERKAS -->
+<div class="card">
+<h3>Upload Berkas</h3>
+
+<label>Foto Diri</label>
+<input type="file" id="foto_diri" accept="image/*">
+<img id="preview_foto" class="preview">
+
+<label>Ijazah</label>
+<input type="file" id="ijazah" accept="image/*,.pdf">
+<img id="preview_ijazah" class="preview">
+
+<label>Foto KTP</label>
+<input type="file" id="ktp" accept="image/*">
+<img id="preview_ktp" class="preview">
+
+</div>
+
+<!-- BUTTON -->
+<div class="btn-group">
+<button type="reset" class="btn reset">Reset</button>
+<button type="submit" class="btn submit">Daftar</button>
+</div>
+
+</form>
+
+</div>
+</section>
+
+<script src="daftar.js"></script>
+
+</body>
+</html>

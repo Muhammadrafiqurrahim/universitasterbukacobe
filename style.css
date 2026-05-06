@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --main-color: #436b95;
+    --accent-color: #6f9bc9;
+    --text-dark: #1f2a37;
+    --white: #ffffff;
+}
+
+/* ================= GLOBAL ================= */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--white);
+    overflow-x: hidden;
+    position: relative;
+
+    /* 🎬 HERO GRADIENT */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+/* ✨ GLOW EFFECT */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 0;
+}
+
+body::before {
+    background: rgba(255,255,255,0.25);
+    top: 80px;
+    left: -150px;
+}
+
+body::after {
+    background: rgba(255,255,255,0.15);
+    bottom: 60px;
+    right: -150px;
+}
+
+/* ================= NAVBAR ================= */
+.header {
+    position: sticky;
+    top: 0;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+    z-index: 1000;
+
+    /* glass navbar */
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* NAV */
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    padding: 60px 7%;
+    position: relative;
+    z-index: 2;
+}
+
+/* ================= GLASS CARD ================= */
+.home-content {
+    max-width: 500px;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(18px);
+
+    border-radius: 18px;
+    padding: 35px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* TEXT */
+.home-content h3 {
+    font-size: 1.6rem;
+}
+
+.home-content h1 {
+    font-size: 3.2rem;
+    margin: 10px 0;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* BUTTON PREMIUM */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    background: white;
+    color: var(--main-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* ================= SLIDER ================= */
+.home-img {
+    width: 520px;
+
+    /* efek card */
+    background: rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 16px;
+}
+
+/* 🔥 FLEXIBLE HEIGHT */
+.swiper {
+    width: 100%;
+    height: auto;
+}
+
+/* 🔥 BIAR FOTO TIDAK KE POTONG */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;          /* 🔥 penting */
+    object-fit: contain;   /* 🔥 tidak kepotong */
+    border-radius: 12px;
+}
+
+/* NAV SWIPER */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+}
+
+.swiper-pagination-bullet-active {
+    background: white;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .navbar {
+        gap: 15px;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
+}
